@@ -1,0 +1,26 @@
+CREATE TABLE `pemilih` (
+	`id` VARCHAR(100) NOT NULL DEFAULT '' COLLATE 'armscii8_bin',
+	`no` INT(11) NULL DEFAULT NULL,
+	`nama` VARCHAR(255) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`jk` VARCHAR(10) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`usia` INT(11) NULL DEFAULT NULL,
+	`alamat` VARCHAR(255) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`rt` VARCHAR(5) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`rw` VARCHAR(5) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`provinsi` VARCHAR(50) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`kabupaten` VARCHAR(50) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`kecamatan` VARCHAR(50) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`kelurahan` VARCHAR(50) NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`tps` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `idx_nama` (`nama`) USING BTREE,
+	INDEX `idx_jk` (`jk`) USING BTREE,
+	INDEX `idx_usia` (`usia`) USING BTREE,
+	INDEX `idx_provinsi` (`provinsi`) USING BTREE,
+	INDEX `idx_kabupaten` (`kabupaten`) USING BTREE,
+	INDEX `idx_kecamatan` (`kecamatan`) USING BTREE,
+	INDEX `idx_kelurahan` (`kelurahan`) USING BTREE
+)
+COLLATE='armscii8_bin'
+ENGINE=InnoDB
+;
